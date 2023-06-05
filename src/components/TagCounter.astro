@@ -1,0 +1,15 @@
+---
+  const tagCounts = {};
+
+  allPosts.forEach((post) => {
+    tags.forEach((tag) => {
+      if (tagCounts[tag]) {
+        tagCounts[tag]++;
+      } else {
+        tagCounts[tag] = 1;
+      }
+    });
+  });
+
+  export { tagCounts };
+---
