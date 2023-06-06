@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import TagCounter from '../components/TagCounter.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
@@ -10,6 +11,7 @@ const { frontmatter } = Astro.props;
   <div class="tags">{frontmatter.tags.map((tag) => (
       <p class="tags"><a href={`/tags/${tag}`}>{tag}</a></p>
   ))}</div>
+  <TagCounter />
 <slot />
 </BaseLayout>
 
